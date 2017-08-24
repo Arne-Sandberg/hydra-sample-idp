@@ -18,6 +18,7 @@ setup(
             'run-hydra-sample-idp=hydra_sample_idp.idp:cli',
         ]
     },
+    include_package_data=True,
     tests_require=['nose'],
     test_suite='nose.collector'
 )

@@ -1,1 +1,2 @@
 recursive-include hydra_sample_idp/templates *
+recursive-include hydra_sample_idp/resource *
