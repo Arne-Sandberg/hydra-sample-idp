@@ -6,6 +6,7 @@ setup(
     description='',
     long_description='',
     packages=find_packages(),
+    zip_safe=False,
     install_requires=[
         'flask',
         'flask-login',
