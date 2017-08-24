@@ -10,6 +10,7 @@ setup(
         'flask',
         'flask-login',
         'requests',
+        'pyyaml',
     ],
     entry_points={
         'console_scripts': [
