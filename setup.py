@@ -8,7 +8,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'flask',
-        'flask-admin',
+        'flask-login',
         'requests',
     ],
     entry_points={
