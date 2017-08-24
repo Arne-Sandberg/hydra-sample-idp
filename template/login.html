@@ -1,0 +1,18 @@
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+  </head>
+  <body>
+    <form action="/login" method="post">
+      {% if error != "" %}
+      <p>{{error}}</p>
+      {% endif %}
+      <p>ユーザー名</p>
+      <p><input type="text" name="username" value="{{username}}"></p>
+      <p>パスワード</p>
+      <p><input type="password" name="password" value="{{password}}"></p>
+      <p><input type="submit" value="ログイン"></p>
+    </form>
+  </body>
+</html>

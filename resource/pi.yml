@@ -1,0 +1,21 @@
+-
+  name: ryota
+  age: 99
+  birth:
+    month: 12
+    day: 12
+  sex: male
+-
+  name: yoshiko
+  age: 40
+  birth:
+    month: 2
+    day: 12
+  sex: female
+-
+  name: yusuke
+  age: 10
+  birth:
+    month: 12
+    day: 30
+  sex: male
