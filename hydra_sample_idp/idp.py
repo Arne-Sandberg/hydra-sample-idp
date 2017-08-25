@@ -19,7 +19,7 @@ res = Resource(HYDRA_URL, CLIENT_ID, CLIENT_SECRET)
 
 
 def _get_resouce_path(resource_name):
-    return os.path.join(hydra_sample_idp, 'resource', resource_name)
+    return os.path.join(hydra_sample_idp.__path__[0], 'resource', resource_name)
 
 
 def auth(name, password):
