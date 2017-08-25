@@ -2,6 +2,8 @@ from flask import Flask, render_template, redirect, url_for, request, jsonify
 from flask.ext.login import LoginManager, login_required, login_user, logout_user, current_user
 import yaml
 from hydra.resource import Resource
+import hydra_sample_idp
+import os.path
 
 app = Flask(__name__)
 app.secret_key = 'idp secret key'
@@ -16,8 +18,12 @@ CLIENT_SECRET = "idp-secret"
 res = Resource(HYDRA_URL, CLIENT_ID, CLIENT_SECRET)
 
 
+def _get_resouce_path(resource_name):
+    return os.path.join(hydra_sample_idp, 'resource', resource_name)
+
+
 def auth(name, password):
-    with open('resource/id.yml') as f:
+    with open(_get_resouce_path('id.yml')) as f:
         ids = yaml.load(f)
     for i in ids:
         if i['name'] == name and i['password'] == password:
@@ -26,7 +32,7 @@ def auth(name, password):
 
 
 def get_information(name):
-    with open('resource/pi.yml') as f:
+    with open(_get_resouce_path('pi.yml')) as f:
         info = yaml.load(f)
     for i in info:
         if i['name'] == name:
@@ -35,7 +41,7 @@ def get_information(name):
 
 
 def get_information_all():
-    with open('resource/pi.yml') as f:
+    with open(_get_resouce_path('pi.yml')) as f:
         info = yaml.load(f)
     return info
 
